@@ -33,12 +33,12 @@ int coin_row(int C[], int n)
 int main()
 {
     int n;
-    cout << "Enter the number of coins ";
+    cout << "\nEnter the number of coins ";
     cin >> n;
 
     int *C = new int[n];
 
-    cout << "Enter the coin values : ";
+    cout << "\nEnter the coin values : ";
     for (int i = 0; i < n; i++)
     {
         cin >> C[i];
@@ -49,5 +49,6 @@ int main()
     cout << "\n"
          << "The maximum amount is : " << maximum;
 
+    cout<<"\n\n";
     return n;
 }

@@ -40,24 +40,30 @@ int main()
 {
     int n;
 
-    cout << "ENTER NO. OF ELEMENTS IN THE ARRAY : ";
+    
+    cout << "\nENTER NO. OF ELEMENTS IN THE ARRAY : ";
     cin >> n;
 
     int *arr = new int[n];
 
-    cout << "ENTER THE ARRAY ELEMENTS ONE BY ONE : ";
+    
+    cout << "\nENTER THE ARRAY ELEMENTS ONE BY ONE : ";
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
 
-    cout << "AFTER QUICK SORT : ";
+    
+    cout << "\nAFTER QUICK SORT : ";
     quick_sort(arr, 0, n - 1);
 
     for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }
+
+    
+    cout << "\n\n";
 
     return 0;
 }

@@ -22,21 +22,23 @@ void generateFibonacci(int n, int fibSeries[]) {
 int main() {
     int n;
 
-    cout << "Enter the number of Fibonacci numbers to generate: ";
+    cout << "\nEnter the number of Fibonacci numbers to generate: ";
     cin >> n;
 
     if (n <= 0) {
-        cout << "Invalid input. Please enter a positive integer." << std::endl;
+        cout << "\nInvalid input. Please enter a positive integer." << endl;
         return 1;
     }
 
     int fibonacciSeries[n];
     generateFibonacci(n, fibonacciSeries);
 
-    cout << "Fibonacci Series:";
+    cout << "\nFibonacci Series:";
     for (int i = 0; i < n; ++i) {
-        std::cout << " " << fibonacciSeries[i];
+        cout << " " << fibonacciSeries[i];
     }
+
+    cout<<"\n\n";
 
     return 0;
 }

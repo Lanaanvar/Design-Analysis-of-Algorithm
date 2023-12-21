@@ -60,21 +60,12 @@ int coin_coll(int **C, int n, int m)
 
     cout<<"\n\n";
 
-    for (int i = 0; i < n; ++i)
-    {
-        for (int j = 0; j < m; ++j)
-        {
-            cout<< F[i][j]<<" ";
-        }
-        cout<<"\n";
-    }
-
     traceBack(F, n, m);
 
 
     int result = F[n - 1][m - 1];
 
-    // Deallocate memory
+    
     for (int i = 0; i < n; ++i)
     {
         delete[] F[i];
@@ -87,20 +78,19 @@ int coin_coll(int **C, int n, int m)
 int main()
 {
     int n, m;
-    cout << "Enter the number of rows: ";
+    cout << "\nEnter the number of rows: ";
     cin >> n;
 
-    cout << "Enter the number of columns: ";
+    cout << "\nEnter the number of columns: ";
     cin >> m;
 
-    // Allocate memory for the 2D array C
     int **C = new int *[n];
     for (int i = 0; i < n; ++i)
     {
         C[i] = new int[m];
     }
 
-    cout << "Enter the values for the matrix C:\n";
+    cout << "\nEnter the values for the matrix C:\n";
     for (int i = 0; i < n; ++i)
     {
         for (int j = 0; j < m; ++j)
@@ -111,7 +101,9 @@ int main()
 
     int maximum = coin_coll(C, n, m);
 
-    cout << "The maximum number of coins collected is: " << maximum << endl;
+    cout << "\nThe maximum number of coins collected is: " << maximum << endl;
+
+    cout<<"\n\n";
 
     return 0;
 }

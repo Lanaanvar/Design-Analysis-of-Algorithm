@@ -25,7 +25,7 @@ void insertion_sort(double arr[], int n)
 int main()
 {
     int n;
-    cout << "Enter length of array : ";
+    cout << "\nEnter length of array : ";
     cin >> n;
 
     cout << "\n";

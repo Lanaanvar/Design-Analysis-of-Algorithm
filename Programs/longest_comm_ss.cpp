@@ -66,7 +66,6 @@ void lcs(int row, int col, string text1, string text2)
          << "The largest common subsequence length is: " << mat[row][col];
     printLCS(row, col, text1, text2, mat);
 
-    // Deallocate memory
     for (int i = 0; i <= row; i++)
     {
         delete[] mat[i];
@@ -77,17 +76,18 @@ void lcs(int row, int col, string text1, string text2)
 int main()
 {
     string S1;
-    cout << "Enter string1 : ";
+    cout << "\nEnter string1 : ";
     cin >> S1;
 
     string S2;
-    cout << "Enter string2 : ";
+    cout << "\nEnter string2 : ";
     cin >> S2;
 
     int m = S1.size();
     int n = S2.size();
 
     lcs(m, n, S1, S2);
-
+    cout<<"\n\n";
+    
     return 0;
 }

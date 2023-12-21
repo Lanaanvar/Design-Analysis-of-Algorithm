@@ -66,8 +66,6 @@ int min_cost_path(int** C, int n, int m)
     cout << "The minimum path sum is: " << result << endl;
     showPath(F, n - 1, m - 1);
 
-
-    // Deallocate memory
     for (int i = 0; i < n; ++i) {
         delete[] F[i];
     }
@@ -80,19 +78,18 @@ int min_cost_path(int** C, int n, int m)
 int main()
 {
     int n, m;
-    cout << "Enter the number of rows: ";
+    cout << "\nEnter the number of rows: ";
     cin >> n;
 
-    cout << "Enter the number of columns: ";
+    cout << "\nEnter the number of columns: ";
     cin >> m;
 
-    // Allocate memory for the 2D array C
     int** M = new int*[n];
     for (int i = 0; i < n; ++i) {
         M[i] = new int[m];
     }
 
-    cout << "Enter the values for the matrix C:\n";
+    cout << "\nEnter the values for the matrix C:\n";
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < m; ++j) {
             cin >> M[i][j];
@@ -101,7 +98,7 @@ int main()
 
     int maximum = min_cost_path(M, n, m);
 
-    cout << "The minimum cost of the path in the matrix is: " << maximum << endl;
-
+    cout << "\nThe minimum cost of the path in the matrix is: " << maximum << endl;
+    cout<<"\n\n";
     return 0;
 }

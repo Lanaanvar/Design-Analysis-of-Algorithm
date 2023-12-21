@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void selection_sort(string a[], int n)
+void selection_sort(int a[], int n)
 {
     for(int i=0; i<n-1; i++)
     {
@@ -29,21 +29,23 @@ void selection_sort(string a[], int n)
 int main()
 {
     int n;
-    cout<<"Enter length of array : ";
+    cout<<"\nEnter length of array : ";
     cin>>n;
     cout<<"\n";
 
-    string* array= new string[n];
-    cout<<"Enter "<<n<<" array strings :";
-    for(int i=0; i<n; i++)
+    int* array= new int[n];
+    cout << "\nEnter the array elements one by one : ";
+    for (int i = 0; i < n; i++)
     {
-        cin>>array[i];
+        cin >> array[i];
     }
+    cout<<"\n";
     cout<<"\nGiven array : ";
     for(int k=0; k<n; k++)
     {
         cout<<array[k]<<" ";
     }
+    cout<<"\n";
 
     cout<<"\nAfter sorting : ";
     selection_sort(array, n);
